@@ -1,13 +1,13 @@
 {
   "expo": {
     "name": "FableAble",
-    "slug": "alishkas-adventure",
+    "slug": "FableAble",
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "backgroundColor": "#006666",
     "android": {
-      "package": "com.alishka.adventure",
+      "package": "com.john.adventure",
       "adaptiveIcon": {
         "backgroundColor": "#006666"
       }

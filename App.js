@@ -1,4 +1,4 @@
-// Alishka's Adventure Engine
+// John's Adventure Engine
 // Single-file Expo app (SDK 54+). See README for setup.
 //
 // Corrections vs. original PRD are marked with  // [FIX]  comments.
@@ -272,7 +272,7 @@ function Root() {
   const [apiKey, setApiKey] = useState(null);
   const [model, setModel] = useState(DEFAULT_MODEL);
 
-  const [character, setCharacter] = useState('Alishka');
+  const [character, setCharacter] = useState('John');
   const [hobby, setHobby] = useState('');
   const [genre, setGenre] = useState('fantasy');
 
@@ -361,7 +361,7 @@ function Root() {
   // ---- start an offline story --------------------------------------------
   function startOfflineStory(reasonMsg) {
     const story = { ...OFFLINE_STORIES[Math.floor(Math.random() * OFFLINE_STORIES.length)] };
-    story.hero = character || 'Alishka';
+    story.hero = character || 'John';
     const text = offlinePartText(story, 0, null);
     setOfflineStory(story);
     setSnapshotHistory([]);
@@ -552,14 +552,14 @@ function Root() {
   // ---- share --------------------------------------------------------------
   async function shareStory() {
     try {
-      const title = `Alishka's Adventure\nStarring ${character}\n\n`;
+      const title = `John's Adventure\nStarring ${character}\n\n`;
       const bodyText = storyHistory
         .map((h) => `Part ${h.part}\n${h.text}` + (h.choice ? `\n\n( ${character} chose to ${lowerFirst(h.choice)} )` : ''))
         .join('\n\n\n');
       const full = title + bodyText + '\n';
 
       // [FIX] new SDK 54 File API (writeAsStringAsync is deprecated).
-      const file = new File(Paths.cache, 'Alishkas_Adventure.txt');
+      const file = new File(Paths.cache, 'Johns_Adventure.txt');
       try { if (file.exists) file.delete(); } catch (e) {}
       file.create();
       file.write(full);
@@ -571,7 +571,7 @@ function Root() {
       // [FIX] expo-sharing opens the system share sheet; WhatsApp appears there.
       await Sharing.shareAsync(file.uri, {
         mimeType: 'text/plain',
-        dialogTitle: 'Share Alishka\'s Adventure',
+        dialogTitle: 'Share John\'s Adventure',
         UTI: 'public.plain-text',
       });
     } catch (e) {
@@ -654,7 +654,7 @@ function SetupScreen({ character, setCharacter, hobby, setHobby, genre, setGenre
         <Text style={styles.label}>Who is the main character?</Text>
         <TextInput
           style={styles.input} value={character} onChangeText={setCharacter}
-          placeholder="Alishka" placeholderTextColor="#7AA3A3" maxLength={20}
+          placeholder="John" placeholderTextColor="#7AA3A3" maxLength={20}
         />
 
         <Text style={styles.label}>What do they love to do?</Text>
