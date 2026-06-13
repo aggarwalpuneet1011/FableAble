@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "FableAble",
+    "slug": "alishkas-adventure",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#006666",
+    "android": {
+      "package": "com.alishka.adventure",
+      "adaptiveIcon": {
+        "backgroundColor": "#006666"
+      }
+    },
+    "plugins": [
+      "expo-secure-store"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "4a84e7a6-835b-4c48-b15d-e8ef61b051d8"
+      }
+    },
+    "owner": "puneet1011"
+  }
+}
