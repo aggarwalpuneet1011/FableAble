@@ -7,7 +7,7 @@ The child picks a hero name, what they love to do, and a genre — then chooses 
 ---
 ## Why
 
-Built for my daughter, 7yrs old. I'd built her typing tutors and story tools that she loves — all running on a laptop she can't access stuck in a traffic jam in Sakinaka. This is the same thing, minus the laptop dependency.
+-Built for my daughter, 7yrs old. I'd built her typing tutors and story tools that she loves — all running on a laptop she can't access stuck in a traffic jam in Sakinaka. This is the same thing, minus the laptop dependency.
 ---
 ## Features
 
